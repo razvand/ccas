@@ -9,129 +9,69 @@ docusaurus:
   plugin: docusaurus
   options:
     course_name: CCAS
+    math: true
     sidebar: js
     structure:
-      - Introduction:
-        - Intro:
-            name: README
-            location: content/landing-page
+      - Introduction: content/landing-page/README.md
       - Lecture:
         - Numbers to Indices:
-          - Overview:
-              location: content/chapters/numbers-to-indices/lecture
-              name: content/overview
-          - Numbers, arithmetic and basic algebra:
-              location: content/chapters/numbers-to-indices/lecture
-              name: content/numbers-arithmetic-basic-algebra
-          - Data vectors:
-              location: content/chapters/numbers-to-indices/lecture
-              name: content/data-vectors
-          - More on algebra:
-              location: content/chapters/numbers-to-indices/lecture
-              name: content/discrete-random-vars-binomial-distribution
-          - Discrete random variables and the binomial distribution:
-              location: content/chapters/numbers-to-indices/lecture
-              name: content/discrete-random-vars-binomial-distribution
-          - Functions:
-              location: content/chapters/numbers-to-indices/lecture
-              name: content/functions
-          - Polynomials:
-              location: content/chapters/numbers-to-indices/lecture
-              name: content/polynomials
-          - Simple data analysis in R:
-              location: content/chapters/numbers-to-indices/lecture
-              name: content/simple-data-analysis-r
-          - Indices and the apply commands in R:
-              location: content/chapters/numbers-to-indices/lecture
-              name: content/indices-apply-commands-r
+            path: content/chapters/numbers-to-indices/lecture
+            extra:
+              - media
+            subsections:
+              - Overview: content/overview.md
+              - Numbers, arithmetic and basic algebra: content/numbers-arithmetic-basic-algebra.md
+              - Data vectors: content/data-vectors.md
+              - More on algebra: content/more-algebra.md
+              - Discrete random variables and the binomial distribution: content/discrete-random-vars-binomial-distribution.md
+              - Functions: content/functions.md
+              - Polynomials: content/polynomials.md
+              - Simple data analysis in R: content/simple-data-analysis-r.md
+              - Indices and the apply commands in R: content/indices-apply-commands-r.md
         - Functions:
-          - Overview:
-              location: content/chapters/functions/lecture
-              name: content/overview
-          - Functions of functions and the exponential function:
-              location: content/chapters/functions/lecture
-              name: content/functions-of-functions.exponential
-          - Inverse functions and the logarithm:
-              location: content/chapters/functions/lecture
-              name: content/inverse-functions-logarithm
-          - Continuity and limits:
-              location: content/chapters/functions/lecture
-              name: content/continuity-limits
-          - Sequences and series:
-              location: content/chapters/functions/lecture
-              name: content/sequences-series
-          - Slopes of lines and curves:
-              location: content/chapters/functions/lecture
-              name: content/slopes-lines-curves
-          - Derivatives:
-              location: content/chapters/functions/lecture
-              name: content/derivatives
-          - Applications of differentiation:
-              location: content/chapters/functions/lecture
-              name: content/applications-differentiation
-          - Integrals and probability density functions:
-              location: content/chapters/functions/lecture
-              name: content/integrals-prob-density-funcs
-          - Principles of programming:
-              location: content/chapters/functions/lecture
-              name: content/programming-principles
-          - The Central Limit Theorem and related topics:
-              location: content/chapters/functions/lecture
-              name: content/central-limit-theorem
-          - Miscellanea:
-              location: content/chapters/functions/lecture
-              name: content/miscellanea
+            path: content/chapters/functions/lecture
+            extra:
+              - media
+            subsections:
+              - Overview: content/overview.md
+              - Functions of functions and the exponential function: content/functions-of-functions.exponential.md
+              - Inverse functions and the logarithm: content/inverse-functions-logarithm.md
+              - Continuity and limits: content/continuity-limits.md
+              - Sequences and series: content/sequences-series.md
+              - Slopes of lines and curves: content/slopes-lines-curves.md
+              - Derivatives: content/derivatives.md
+              - Applications of differentiation: content/applications-differentiation.md
+              - Integrals and probability denisty functions: content/integrals-prob-density-funcs.md
+              - Principles of programming: content/programming-principles.md
+              - The Central Limit Theorem and related topics: content/central-limit-theorem.md
+              - Miscellanea: content/miscellanea.md
         - Multivariate to Power:
-          - Overview:
-              location: content/chapters/multivariate-to-power/lecture
-              name: content/overview
-          - Multivariate probability distributions:
-              location: content/chapters/multivariate-to-power/lecture
-              name: content/multivariate-prob-distributions
-          - Some distributions related to the normal:
-              location: content/chapters/multivariate-to-power/lecture
-              name: content/distributions-normal
-          - Estimation, estimates and estimators:
-              location: content/chapters/multivariate-to-power/lecture
-              name: content/estimation
-          - Test of hypothesis, P values and related concepts:
-              location: content/chapters/multivariate-to-power/lecture
-              name: content/test-hypothesis-p-values
-          - Power and sample sizes:
-              location: content/chapters/multivariate-to-power/lecture
-              name: content/power-sample-sizes
+            path: content/chapters/multivariate-to-power/lecture
+            extra:
+              - media
+            subsections:
+              - Overview: content/overview.md
+              - Multivariate probability distributions: content/multivariate-prob-distributions.md
+              - Some distributions related to the normal: content/distributions-normal.md
+              - Estimation, estimates and estimators: content/estimation.md
+              - Test of hypothesis, P values and related concepts: content/test-hypothesis-p-values.md
+              - Power and sample sizes: content/power-sample-sizes.md
         - Vectors to Some Regression Topics:
-          - Overview:
-              location: content/chapters/vectors-matrix-ops/lecture
-              name: content/overview
-          - Vectors and Matrix Operations:
-              location: content/chapters/vectors-matrix-ops/lecture
-              name: content/vectors-matrix-operations
-          - Some notes on matrices and linear operators:
-              location: content/chapters/vectors-matrix-ops/lecture
-              name: content/matrices-linear-operators
-          - Ranks and determinants:
-              location: content/chapters/vectors-matrix-ops/lecture
-              name: content/ranks-determinants
-          - Multivariate calculus:
-              location: content/chapters/vectors-matrix-ops/lecture
-              name: content/multivariate-calculus
-          - The multivariate normal distribution and related topics:
-              location: content/chapters/vectors-matrix-ops/lecture
-              name: content/multivariate-normal-distribution
-          - Independence, expectations and the moment generating function:
-              location: content/chapters/vectors-matrix-ops/lecture
-              name: content/independence
-          - The gamma distribution:
-              location: content/chapters/vectors-matrix-ops/lecture
-              name: content/gamma-distribution
-          - Notes and examples - The linear model:
-              location: content/chapters/vectors-matrix-ops/lecture
-              name: content/examples-linear-model
-          - Some regression topics:
-              location: content/chapters/vectors-matrix-ops/lecture
-              name: content/regression-topics
-    config_meta:
+            path: content/chapters/vectors-matrix-ops/lecture
+            extra:
+              - media
+            subsections:
+              - Overview: content/overview.md
+              - Vectors and Matrix Operations: content/vectors-matrix-operations.md
+              - Some notes on matrices and linear operators: content/matrices-linear-operators.md
+              - Ranks and determinants: content/ranks-determinants.md
+              - Multivariate calculus: content/multivariate-calculus.md
+              - The multivariate normal distribution and related topics: content/multivariate-normal-distribution.md
+              - Independence, expectations and the moment generating function: content/independence.md
+              - The gamma distribution: content/gamma-distribution.md
+              - Notes and examples - The linear model: content/examples-linear-model.md
+              - Some regression topics: content/regression-topics.md
+    config_meta: 
       title: Computing and Calculus for Applied Statistics
       url: http://localhost/
       baseUrl: /ccas/
