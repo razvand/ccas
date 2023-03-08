@@ -3,12 +3,15 @@
 BEGIN {
 	line = ""
 	line_quote = ""
-	in_paragraph = 0
+	in_quote = 0
+	admonition = 0
 }
 
 /^#/ {
 	for (i = 1; i <= NF; i++) {
-		if ($i != 1 && ($i == "the" || $i == "of" || $i == "a" || $i == "an" || $i == "for")) {
+		if ($i != 1 && ($i == "the" || $i == "of" || $i == "a" || \
+		       $i == "an" || $i == "for" || $i == "and" || $i == "or" || \
+		       $i == "on" || $i == "from" || $i == "to" || $i == "off")) {
 			continue
 		}
 		else {
@@ -21,24 +24,59 @@ BEGIN {
 	sub(/[ \t]+$/, "", $0);
 }
 
-/^>?[ \t]*$/ {
+/^>[ \t]*$/ {
 	if (line != "")
 		print(line)
-	if (line_quote != "")
-		print(line_quote)
 	line = ""
-	line_quote = ""
-	print
+	in_quote = 1
+	print("")
+	next
+}
+
+/^[ \t]*$/ {
+	if (line != "")
+		print(line)
+	line = ""
+	if (in_quote == 1) {
+		in_quote = 0
+		if (admonition == 1) {
+			print("")
+			print(":::")
+			admonition = 0
+		}
+	}
+	print("")
+	next
+}
+
+/^>[ \t]*\*\*Note/ {
+	line = ":::note Note"
+	in_quote = 1
+	admonition = 1
+	next
+}
+
+/^>[ \t]*\*\*Example/ {
+	line = ":::info Example"
+	in_quote = 1
+	admonition = 1
+	next
+}
+
+/^>[ \t]*\*\*Definition/ {
+	line = ":::note Definition"
+	in_quote = 1
+	admonition = 1
 	next
 }
 
 /^>/ {
 	new = $0
 	sub(/^>[ \t]+/, "", new)
-	if (line_quote == "")
-		line_quote = ">"  " "  new
+	if (line == "")
+		line = new
 	else
-		line_quote = line_quote " " new
+		line = line " " new
 	next
 }
 
@@ -47,11 +85,18 @@ BEGIN {
 		line = $0
 	else
 		line = line " " $0
+	next
 }
 
 END {
 	if (line != "")
 		print(line)
-	if (line_quote != "")
-		print(line_quote)
+	if (in_quote == 1) {
+		in_quote = 0
+		if (admonition == 1) {
+			print("")
+			print(":::")
+			admonition = 0
+		}
+	}
 }
