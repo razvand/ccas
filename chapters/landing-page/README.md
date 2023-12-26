@@ -14,10 +14,10 @@ There is a sizeable focus on the use of the [R programming language for statisti
 
 Chapters are:
 
-- [Numbers to Indices](../numbers-to-indices/overview/reading/read.md)
-- [Functions](../functions/overview/reading/read.md)
-- [Multivariate to Power](../multivariate-to-power/overview/reading/read.md)
-- [Vectors to Some Regression Topics](../vectors-matrix-ops/overview/reading/read.md)
+- [Numbers to Indices](../numbers-to-indices/overview/reading)
+- [Functions](../functions/overview/reading)
+- [Multivariate to Power](../multivariate-to-power/overview/reading)
+- [Vectors to Some Regression Topics](../vectors-matrix-ops/overview/reading)
 
 ## Licensing and Contributing
 
